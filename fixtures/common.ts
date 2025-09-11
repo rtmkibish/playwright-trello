@@ -1,5 +1,5 @@
 import { test as baseTest, expect } from "@playwright/test";
-import { credentialsManager } from "../services/CredentialsManager.ts";
+import { credentialsManager } from "@services/CredentialsManager.ts";
 
 interface BaseFixture {
   credentialsManager: typeof credentialsManager;

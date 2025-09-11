@@ -1,6 +1,6 @@
-import { test, expect } from "../fixtures/common.ts";
-import WelcomePage from "../pages/WelcomePage";
-import LoginPage from "../pages/LoginPage";
+import { test, expect } from "@fixtures/common.ts";
+import WelcomePage from "@pages/WelcomePage.ts";
+import LoginPage from "@pages/LoginPage.ts";
 
 import type { TrelloCredentials } from "../types/credentials.ts";
 

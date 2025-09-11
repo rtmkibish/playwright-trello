@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Test Playwright testing tool by automation UI and API test of the Trello platform",
   "main": "index.js",
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "",
@@ -11,5 +12,11 @@
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.1",
     "dotenv": "^17.2.2"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0"
   }
 }
