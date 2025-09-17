@@ -1,18 +1,11 @@
-import { test, expect } from "@fixtures/common.ts";
-import WelcomePage from "@pages/WelcomePage.ts";
-import LoginPage from "@pages/LoginPage.ts";
-
-import type { TrelloCredentials } from "../types/credentials.ts";
+import { test, expect } from "@fixtures/ui/login.fixture.ts";
 
 test.describe("Trello login test", () => {
   test("Should show error log in from welcome page", async ({
-    page,
-    credentialsManager,
+    welcomePage,
+    loginCredentials: { email, password },
   }) => {
-    const welcomePage = await WelcomePage.open(page);
     const loginPage = await welcomePage.login();
-    const { email, password }: TrelloCredentials =
-      await credentialsManager.getCredentialsFor("TRELLO");
     await loginPage.emailInput.fill(email);
     await loginPage.submitBtn.click();
     await loginPage.passwordInput.fill(password);
@@ -25,12 +18,9 @@ test.describe("Trello login test", () => {
   });
 
   test("Should show error log in from login page", async ({
-    page,
-    credentialsManager,
+    loginPage,
+    loginCredentials: { email, password },
   }) => {
-    const loginPage = await LoginPage.open(page);
-    const { email, password }: TrelloCredentials =
-      await credentialsManager.getCredentialsFor("TRELLO");
     await loginPage.emailInput.fill(email);
     await loginPage.submitBtn.click();
     await loginPage.passwordInput.fill(password);

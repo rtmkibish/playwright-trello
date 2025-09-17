@@ -10,8 +10,7 @@
     "paths": {
       "@fixtures/*": ["fixtures/*"],
       "@pages/*": ["pages/*"],
-      "@services/*": ["services/*"],
-      "@types/*": ["types/*"]
+      "@services/*": ["services/*"]
     },
 
     // Environment Settings
