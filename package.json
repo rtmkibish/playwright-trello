@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "prepare": "husky",
-    "lint": "npx eslint"
+    "lint": "npx eslint",
+    "test:ui": "npx playwright test --ui"
   },
   "keywords": [],
   "author": "",
